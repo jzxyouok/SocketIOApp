@@ -8,3 +8,5 @@ A work-along repository with Laracasts' "[Real-time Laravel with Socket.io](http
 **Lesson 2:** We take a look at what Laravel has to offer out of the box with Redis.
 
 **Lesson 3:** We setup a Redis client in Node so we can catch events.
+
+**Lesson 4:** Switch to using Laravel's native event broadcasting.
