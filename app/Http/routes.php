@@ -13,5 +13,19 @@
 */
 
 Route::get('/', function () {
-    return Cache::get('foo');
+
+    // 1. Publish event with Redis
+    $data = [
+        'event' => 'UserSignedUp',
+        'data' => [
+            'username' => 'JohnDoe'
+        ]
+    ];
+
+    Redis::publish('test-channel', json_encode($data));
+
+    return view('welcome');
+
+    // 3. Use socket.io to emit to all clients.
+
 });
